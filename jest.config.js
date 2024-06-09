@@ -6,10 +6,15 @@
 /** @type {import('jest').Config} */
 const config = {
   testMatch: [
-    '**/tests/**/*.test.[jt]s?(x)',
+    '**/tests/**/*.test.js',
   ],
 
-  // The paths to modules that run some code to configure or set up the testing environment before each test
+  /*
+  The paths to modules that run some code to configure
+   or set up the testing environment before each test
+
+  */
+
   setupFiles: ['fake-indexeddb/auto'],
 
   // The test environment that will be used for testing

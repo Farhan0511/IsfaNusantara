@@ -2,6 +2,7 @@ import TheIsfaDbSource from '../../data/isfadb-source';
 import UrlParser from '../../routes/url-parser';
 import { createIsfaDetailTemplate, createLikeButtonTemplate } from '../templates/template-creator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
+import FavoriteRestoIdb from '../../data/favorite-resto-idb';
 
 const Detail = {
   async render() {
@@ -22,6 +23,7 @@ const Detail = {
 
     LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      favresto: FavoriteRestoIdb,
       isfa: {
         id: isfa.id,
         name: isfa.name,
